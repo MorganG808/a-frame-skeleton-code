@@ -5,13 +5,17 @@
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene id = "scene">
-      <a-entity gltf-model = "url(/sharks.glb)" scale = "0.05 0.05 0.05" position="1 0.5 -4" light= "color: magenta; type: directional; intensity: 50"></a-entity>
-      
+    <a-scene id = "scene1">
+      <button onClick = "switchScene()" style = "position: absolute; z-index: 1"> Switch Scene</button>
+      <a-sky = ""></a-sky>
 
+    <a-scene id = "scene2" style = "display: none">
+      <button onClick = "switchScene()" style = "position: absolute; z-index: 1"> Switch Scene</button>
+      <a-entity id = "sharks" gltf-model = "url(/sharks.glb)" scale = "0.05 0.05 0.05" position="1 0.5 -4" light= "color: magenta; type: directional; intensity: 50"></a-entity>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="4" color="#1BC8A4"></a-plane>
       <a-sky color="#ADD8E6"></a-sky>
     </a-scene>
+    
       <script src = "script.js"> </script>
   </body>
 </html>
