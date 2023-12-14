@@ -1,25 +1,22 @@
-const sharks = document.getElementById("sharks")
+const whale = document.getElementById("Whale")
 
-let xPos = -5;
+let xPos = 4;
 let yPos = 0;
 
-function moveSharks(){
-    if (xPos < 5){
-        xPos += 0.07
-        yPos += 0.07
+function moveWhale(){
+    if (xPos > 4){
+        xPos += -0.03
     }
     
     else {
-        xPos = -5
-        yPos = 0
+        xPos = 4
     }
 
-    xPos += 0.07
-    sharks.setAttribute('position', `${xPos} ${yPos} -5`)
-    requestAnimationFrame(moveSharks)
+    whale.setAttribute('position', `${xPos} 3 -5`)
+    requestAnimationFrame(moveWhale)
 }
 
-moveSharks()
+moveWhale()
 
 function switchScene(){
     const scene1 = document.getElementById("scene1")
