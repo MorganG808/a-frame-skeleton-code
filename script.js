@@ -22,6 +22,10 @@ function moveJellyfish(){
         yPos += 0.003
     }
     
+    else if (yPos == 3 && yPos == -1){
+        yPos += -0.003
+    }
+
     else {
         yPos = 0
     }
