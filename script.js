@@ -18,12 +18,12 @@ function moveWhale(){
 }
 
 function moveJellyfish(){
-    if (xPos < 5 && xPos > -5){
+    if (xPos < 3 && xPos > -1){
         yPos += 0.003
     }
     
     else {
-        xPos = 4
+        xPos = 0
     }
 
     jellyfish.setAttribute('position', `0 ${yPos} -4`)
