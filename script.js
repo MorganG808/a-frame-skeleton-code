@@ -1,4 +1,5 @@
 const whale = document.getElementById("Whale")
+const jellyfish = document.getElementById("Jellyfish")
 
 let xPos = 4;
 let yPos = 0;
@@ -16,4 +17,18 @@ function moveWhale(){
     requestAnimationFrame(moveWhale)
 }
 
+function moveJellyfish(){
+    if (xPos < 5 && xPos > -5){
+        yPos += 0.003
+    }
+    
+    else {
+        xPos = 4
+    }
+
+    jellyfish.setAttribute('position', `0 ${yPos} -4`)
+    requestAnimationFrame(moveJellyfish)
+}
+
 moveWhale()
+moveJellyfish()
